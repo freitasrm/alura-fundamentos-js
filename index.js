@@ -31,3 +31,24 @@ const arrayNums = [1, 2, 3, 4]
 const arraySomada = arrayNums.map(num => num * 10);
 
 console.log(arraySomada)
+
+// APRENDENDO COM REDUCE
+const numeros = [43, 50, 65, 12]
+
+
+// FUNÇÃO EXTERNA PARA VISUALIZAÇÃO DO CALLBACK NO REDUCE
+// function operacaoNumerica(acc, atual) {
+//     return atual + acc
+//    }
+   
+// const soma = numeros.reduce(operacaoNumerica, 0)
+
+// DECLARADA (LEGIBILIDADE MELHOR)
+// const soma = numeros.reduce(function (acc, atual) {
+//     return atual + acc
+//    }, 0)
+
+// CONSISA (PRÁTICA COMUM)
+const soma = numeros.reduce((acc, atual) => atual + acc, 0)
+
+console.log(soma) //170
