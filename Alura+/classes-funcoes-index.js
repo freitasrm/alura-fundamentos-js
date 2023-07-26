@@ -41,6 +41,7 @@
 
 ////////////////////////////////////////////////////////////////////
 
+// CLASSE NO JAVASRIPT
 class Livro {
     constructor(nome, editora, paginas) {
         this.nome = nome
@@ -60,7 +61,9 @@ NodeJS.anunciarTitulo()
 NodeJS.descreverTitulo()
 
 // console.log(typeof Livro)
+///////////////////////////////////////////////////////////////////////////////////////
 
+// HERANÇA NO JAVASCRIPT
 class LivroColecao extends Livro {
     constructor(nome, nomeColecao) {
         super(nome)
