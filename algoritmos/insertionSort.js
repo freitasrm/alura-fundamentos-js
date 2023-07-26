@@ -1,5 +1,4 @@
 const lista = require("./listaLivros");
-const troca = require("./troca");
 
 function insertionSort(lista) {
 
@@ -12,7 +11,7 @@ function insertionSort(lista) {
             // lista[analise] = itemAnterior;
             // lista[analise -1] = itemAnalise;
             
-            troca(lista, analise);
+            troca(lista,analise)
 
             analise --
         }
