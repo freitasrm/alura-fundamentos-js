@@ -12,12 +12,19 @@ function trataErro(erro) {
 
 function pegaArquivo(caminhoDoArquivo) {
     const encoding = 'utf-8';
-    fs.readFile(caminhoDoArquivo, encoding, (erro, texto) => {
-        if (erro) {
-            trataErro(erro);
-        }
-        log(padrao(texto));
-    })
+    fs.promeses.readFile(caminhoDoArquivo, encoding) 
+        .then((texto) => console.log(padrao(texto)))    
+        .catch(trataErro)
 }
 
-pegaArquivo('./arquivos/texto.m')
+// function pegaArquivo(caminhoDoArquivo) {
+//     const encoding = 'utf-8';
+//     fs.readFile(caminhoDoArquivo, encoding, (erro, texto) => {
+//         if (erro) {
+//             trataErro(erro);
+//         }
+//         log(padrao(texto));
+//     })
+// }
+
+pegaArquivo('./arquivos/texto.md')
