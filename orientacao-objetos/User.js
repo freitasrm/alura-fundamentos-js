@@ -12,18 +12,55 @@ export default class User {
         this.#ativo = ativo
     }
 
-    #montaObjUser() {
-        return ({
-            nome: this.#nome,
-            email: this.#email,
-            nascimento: this.#nascimento,
-            role: this.#role,
-            ativo: this.#ativo
-        })
+    get nome() {
+        // lógica de condicional
+        return this.#nome;
+    }
+    
+    get email() {
+        // lógica de condicional
+        return this.#email;
+    }
+    
+    get nascimento() {
+        // lógica de condicional
+        return this.#nascimento;
+    }
+    
+    get role() {
+        // lógica de condicional
+        return this.#role;
+    }
+
+    get ativo() {
+        // lógica de condicional
+        return this.#ativo;
+    }
+
+    set nome(novoNome) {
+        if (novoNome === '') {
+            throw new Error('formato não válido')
+        }
+        this.#nome = novoNome;
+    }
+
+    set email(novoEmail) {
+        this.#email = novoEmail;
+    }
+
+    set nascimento(novoNascimento) {
+        this.#nascimento = novoNascimento;
+    }
+
+    set role(novoRole) {
+        this.#role = novoRole;
+    }
+
+    set ativo(novoAtivo) {
+        this.#ativo = novoAtivo;
     }
 
     exibirInfos() {
-        const objUser = this.#montaObjUser();
-        return `${objUser.nome}, ${objUser.email}, ${objUser.nascimento}, ${objUser.role}, ${objUser.ativo}`
+        return `${this.nome}, ${this.email}, ${this.nascimento}, ${this.role}, ${this.ativo}`
     }
 }
