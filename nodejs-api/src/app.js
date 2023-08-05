@@ -20,10 +20,10 @@ routes(app);
 //     { id: 2, "titulo": "O Hobiit" },
 // ]
 
-app.post('/livros', (req, res) => {
-    livros.push(req.body);
-    res.status(201).send('Livro foi cadastrado com sucesso')
-})
+// app.post('/livros', (req, res) => {
+//     livros.push(req.body);
+//     res.status(201).send('Livro foi cadastrado com sucesso')
+// })
 
 // app.get('/', (req, res) => {
 //     res.status(200).send('Curso de Node');
